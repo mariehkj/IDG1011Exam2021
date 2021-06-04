@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Quiz</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="lists.html">Lists</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <div class="content">
+            <h1>Quiz</h1>
+            <form>
+                <p>3+3=?</p>
+                <input type="radio" id="q1a1" name="q1" value="5">
+                <label for="q1a1">5</label>
+                <input type="radio" id="q1a2" name="q1" value="6">
+                <label for="q1a2">6</label>
+                <input type="radio" id="q1a3" name="q1" value="16">
+                <label for="q1a3">16</label>
+                
+                <p>22-38=?</p>
+                <input type="radio" id="q2a1" name="q2" value="122">
+                <label for="q2a1">122</label>
+                <input type="radio" id="q2a2" name="q2" value="16">
+                <label for="q2a2">16</label>
+                <input type="radio" id="q2a3" name="q2" value="-16">
+                <label for="q2a3">-16</label>
+                
+                <p>4*4=?</p>
+                <input type="radio" id="q3a1" name="q3" value="16">
+                <label for="q3a1">16</label>
+                <input type="radio" id="q3a2" name="q3" value="-16">
+                <label for="q3a2">-16</label>
+                <input type="radio" id="q3a3" name="q3" value="√44">
+                <label for="q3a3">√44</label>
+                
+                <p>8/8=?</p>
+                <input type="radio" id="q4a1" name="q4" value="16">
+                <label for="q4a1">16</label>
+                <input type="radio" id="q4a2" name="q4" value="0">
+                <label for="q4a2">0</label>
+                <input type="radio" id="q4a3" name="q4" value="1">
+                <label for="q4a3">1</label>
+                
+                <p>√89737729</p>
+                <input type="radio" id="q5a1" name="q5" value="9293">
+                <label for="q5a1">9293</label>
+                <input type="radio" id="q5a2" name="q5" value="16">
+                <label for="q5a2">16</label>
+                <input type="radio" id="q5a3" name="q5" value="9473">
+                <label for="q5a3">9473</label>
+
+                <br><br><input type="submit" value="Submit" onclick="gradeQuiz()"/>
+            </form>
+        </div>
+    </body>
+    <script>
+        function gradeQuiz(){
+            let q1 = document.getElementsByName("q1");
+            let a1 = null;
+            let q2 = document.getElementsByName("q2");
+            let a2 = null;
+            let q3 = document.getElementsByName("q3");
+            let a3 = null;
+            let q4 = document.getElementsByName("q4");
+            let a4 = null;
+            let q5 = document.getElementsByName("q5");
+            let a5 = null;
+            let form = [[q1,a1, "6"],[q2,a2, "-16"],[q3,a3, "16"],[q4,a4, "1"],[q5,a5, "9473"]];
+            let score = 0;
+            let celebration = ["Boo! You got 0 points!", "You only got 1 point? Loser!!", "Mmmkay, you got 2 points.", "You got 3 points.", "You got 4 points?? NICE!", "WOW! 5 points?? You're even smarter than my cat!"];
+
+            for(var x=0; x<form.length; x++){
+                for(var y=0; y<form[x][0].length; y++){
+                    if(form[x][0][y].checked){
+                        form[x][1] = form[x][0][y].value;
+                    }
+                }
+            }
+
+            for(var z=0; z<form.length; z++){
+                if(form[z][1]==null){alert("Player must check all questions."); return;}
+            }
+
+            for(var a=0; a<form.length; a++){
+                if(form[a][1]==form[a][2]){score++;}
+            }
+
+            alert(celebration[score]);
+        }
+    </script>
+</html>

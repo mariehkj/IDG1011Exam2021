@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Jonas",
+      "age": "21",
+      "city": "Gjøvik",
+      "status": "family"
+    },
+    {
+      "name": "Solveig",
+      "age": "49",
+      "city": "Kristiansand",
+      "status": "family"
+    },
+    {
+      "name": "Bjørn-Tore",
+      "age": "49",
+      "city": "Kristiansand",
+      "status": "family"
+    },
+    {
+      "name": "Torbjørn",
+      "age": "19",
+      "city": "Kristiansand",
+      "status": "family"
+    },
+    {
+      "name": "Øyvind",
+      "age": "15",
+      "city": "Kristiansand",
+      "status": "family"
+    },
+    {
+      "name": "Astrid",
+      "age": "21",
+      "city": "Kristiansand",
+      "status": "friend"
+    },
+    {
+      "name": "Jens Tassen",
+      "age": "1",
+      "city": "Gjøvik",
+      "status": "family"
+    },
+    {
+      "name": "Dunderklumpen",
+      "age": "4",
+      "city": "Moss",
+      "status": "friend"
+    },
+    {
+      "name": "Lillepus",
+      "age": "3",
+      "city": "Moss",
+      "status": "friend"
+    },
+    {
+      "name": "Tom",
+      "age": "74",
+      "city": "Kristiansand",
+      "status": "family"
+    },
+    {
+      "name": "Torill",
+      "age": "70",
+      "city": "Kristiansand",
+      "status": "family"
+    },
+    {
+      "name": "Tornulf",
+      "age": "18",
+      "city": "Oslo",
+      "status": "friend"
+    },
+    {
+      "name": "Olaf",
+      "age": "27",
+      "city": "Bergen",
+      "status": "friend"
+    },
+    {
+      "name": "Olga",
+      "age": "80",
+      "city": "Sandesnes",
+      "status": "friend"
+    },
+    {
+      "name": "Ivar",
+      "age": "1",
+      "city": "Kristiansand",
+      "status": "friend"
+    },
+    {
+      "name": "Henrik",
+      "age": "1",
+      "city": "Kristiansand",
+      "status": "friend"
+    },
+    {
+      "name": "Henrik Ibsen",
+      "age": "193",
+      "city": "Kristiania",
+      "status": "friend"
+    },
+    {
+      "name": "Lena",
+      "age": "22",
+      "city": "Trondheim",
+      "status": "friend"
+    },
+    {
+      "name": "Ingrid",
+      "age": "22",
+      "city": "Trondheim",
+      "status": "friend"
+    },
+    {
+      "name": "Anne-May",
+      "age": "21",
+      "city": "Trondheim",
+      "status": "friend"
+    }
+  ]
+  

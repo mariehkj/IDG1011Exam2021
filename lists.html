@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>List of friends and family</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="lists.html">Lists</a>
+                <a href="quiz.html">Quiz</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <div class="content">
+            <h1>List of friends and family</h1>
+            <form>
+                <input type="radio" id="family" name="status" onclick="printList('family')">
+                <label for="family">Family</label>
+                <input type="radio" id="friend" name="status" onclick="printList('friend')">
+                <label for="friend">Friend</label>
+            </form>
+            <table id="table"></table>
+        </div>
+    </body>
+    <script>
+        function printList(selectedStatus){
+            document.getElementById("table").innerHTML = "<tr><th>Name</th><th>Age</th><th>City</th><th>Status</th></tr>";
+            fetch('assets/lists.json')
+            .then(respons => respons.json())
+            .then(data => {
+                var list = JSON.stringify(data)
+                for(let i=0; i<JSON.parse(list).length; i++){
+                    if(JSON.parse(list)[i].status==selectedStatus){
+                        let tr = document.createElement("tr");
+                        document.getElementById("table").appendChild(tr);
+                        tr.innerHTML += 
+                            "<td>" + JSON.parse(list)[i].name +
+                            "</td><td>" + JSON.parse(list)[i].age +
+                            "</td><td>" + JSON.parse(list)[i].city +
+                            "</td><td>" + JSON.parse(list)[i].status + "</td>";
+                    }
+                }
+            }); 
+        }
+    </script>
+</html>

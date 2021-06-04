@@ -1,0 +1,50 @@
+header{
+    position:sticky;
+    top: 0;
+    background-color: pink;
+}
+
+header, .content{
+    position: relative;
+}
+
+nav{
+    height: 8vh;
+    text-align: center;
+}
+
+nav a {
+    font-size: 2.5vw;
+    margin: 2vw;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: whitesmoke;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+body{
+    background-color: plum;
+}
+
+.content{
+    background-color: whitesmoke;
+    width: 80vw;
+    left: 9vw;
+    padding: 1vw;
+    min-height: 80vh;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 6vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 25vw;
+    display: block;
+    margin: auto;
+}
